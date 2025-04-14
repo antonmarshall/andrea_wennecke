@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -8,10 +7,7 @@ const Map = () => {
   const map = useRef<mapboxgl.Map | null>(null);
   const [mapboxToken, setMapboxToken] = useState<string>('');
 
-  // In Vite, environment variables need to be prefixed with VITE_
-  // Since we don't have that setup, we'll create a token input
   useEffect(() => {
-    // Check if token is in localStorage
     const savedToken = localStorage.getItem('mapbox_token');
     if (savedToken) {
       setMapboxToken(savedToken);
@@ -21,20 +17,18 @@ const Map = () => {
   useEffect(() => {
     if (!mapContainer.current || !mapboxToken) return;
 
-    // Set Mapbox token
     mapboxgl.accessToken = mapboxToken;
     
     try {
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [10.686250, 53.868922], // Coordinates for Beckergrube 11, Lübeck
+        center: [10.684750, 53.868522], // Coordinates for Bäckergrube 1, Lübeck
         zoom: 15
       });
 
-      // Add marker
       new mapboxgl.Marker()
-        .setLngLat([10.686250, 53.868922])
+        .setLngLat([10.684750, 53.868522])
         .addTo(map.current);
     } catch (error) {
       console.error('Error initializing map:', error);

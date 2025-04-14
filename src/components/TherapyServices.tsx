@@ -13,11 +13,10 @@ type TherapyCardProps = {
 
 const TherapyCard = ({ icon, title, description, colorClass, buttonColor, details }: TherapyCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const hoverColorClass = `hover:bg-${buttonColor}/10`;
 
   return (
     <motion.div 
-      className={`bg-white p-6 rounded-lg shadow-md ${colorClass} h-full flex flex-col cursor-pointer ${hoverColorClass}`}
+      className={`bg-white p-6 rounded-lg shadow-md ${colorClass} h-full flex flex-col cursor-pointer hover:bg-opacity-5 hover:bg-${buttonColor} transition-colors duration-300`}
       onClick={() => setIsExpanded(!isExpanded)}
       layout
     >
@@ -48,75 +47,69 @@ const TherapyCard = ({ icon, title, description, colorClass, buttonColor, detail
 };
 
 const TherapyServices = () => {
+  const therapyCards = [
+    {
+      icon: <Palette size={32} />,
+      title: "Kunsttherapie",
+      description: "Durch freies Malen, Formen und kreative Materialien Zugang zu Emotionen finden.",
+      details: "In der Kunsttherapie nutzen wir verschiedene künstlerische Medien wie Farben, Ton und andere Materialien, um Ihre inneren Bilder und Gefühle auszudrücken. Dieser kreative Prozess kann helfen, unbewusste Themen sichtbar zu machen und neue Perspektiven zu entwickeln.",
+      colorClass: "therapy-card-blue",
+      buttonColor: "therapyLightBlue"
+    },
+    {
+      icon: <Brain size={32} />,
+      title: "Körperorientierte Psychotherapie",
+      description: "Verbindung von Körper und Psyche zur ganzheitlichen Wohlbefinden.",
+      details: "Diese Therapieform verbindet klassische Gesprächstherapie mit körperbasierten Interventionen. Wir arbeiten mit Atmung, Bewegung und Körperwahrnehmung, um emotionale Blockaden zu lösen und mehr Lebendigkeit zu spüren.",
+      colorClass: "therapy-card-turquoise",
+      buttonColor: "therapyTurquoise"
+    },
+    {
+      icon: <Music size={32} />,
+      title: "Ausdruckstherapie",
+      description: "Verschiedene kreative Ausdrucksformen nutzen, um Emotionen zu verarbeiten und neue Perspektiven zu gewinnen.",
+      details: "In der Ausdruckstherapie nutzen wir verschiedene kreative Ausdrucksformen wie Schreibarbeit, Musik, Kunst und andere kreative Aktivitäten, um Emotionen zu verarbeiten und neue Perspektiven zu gewinnen.",
+      colorClass: "therapy-card-purple",
+      buttonColor: "therapyPurple"
+    },
+    {
+      icon: <Heart size={32} />,
+      title: "Traumatherapie",
+      description: "Behutsame Bearbeitung traumatischer Erfahrungen durch kreative und körperorientierte Methoden.",
+      details: "In der Traumatherapie nutzen wir kreative und körperbasierte Methoden, um traumatische Erfahrungen zu bearbeiten und zu verstehen. Dies kann helfen, die Traumathematik zu verstehen und die Traumathematik zu verändern.",
+      colorClass: "therapy-card-red",
+      buttonColor: "therapyRed"
+    },
+    {
+      icon: <User size={32} />,
+      title: "Einzeltherapie",
+      description: "Individuell zugeschnittene Begleitung für persönliche Veränderungswünsche und Entwicklungsziele.",
+      details: "In der Einzeltherapie arbeiten wir individuell mit Ihnen und unterstützen Sie bei der Erarbeitung von persönlichen Veränderungswünschen und Entwicklungsziele.",
+      colorClass: "therapy-card-pink",
+      buttonColor: "therapyPink"
+    },
+    {
+      icon: <Users size={32} />,
+      title: "Gruppentherapie",
+      description: "In kleinen Gruppen verschiedene Formen und gemeinsam kreative Lösungswege erarbeiten.",
+      details: "In der Gruppentherapie arbeiten wir in kleinen Gruppen und nutzen gemeinsam kreative Lösungswege, um Probleme zu lösen und neue Perspektiven zu entwickeln.",
+      colorClass: "therapy-card-green",
+      buttonColor: "therapyGreen"
+    }
+  ];
+
   return (
     <section id="therapy" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-6 text-therapyBlue">Meine Therapieangebote</h2>
+        <h2 className="text-3xl font-bold text-center mb-6 text-therapyBlue">Mein Therapieangebot</h2>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-14">
-          Entdecken Sie meine vielfältigen Therapiemethoden für Erwachsene und Jugendliche, 
-          die auf individuelle Bedürfnisse abgestimmt werden.
+          Entdecken Sie meine vielfältigen Therapiemethoden für Erwachsene und Jugendliche.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <TherapyCard 
-            icon={<Palette size={32} />}
-            title="Kunsttherapie"
-            description="Durch freies Malen, Formen und kreative Materialien Zugang zu Emotionen finden und innere Bilder sichtbar machen."
-            colorClass="therapy-card-blue"
-            buttonColor="therapyLightBlue"
-            details="Durch freies Malen, Formen und kreative Materialien Zugang zu Emotionen finden und innere Bilder sichtbar machen."
-          />
-          
-          <TherapyCard 
-            icon={<Brain size={32} />}
-            title="Körperorientierte Psychotherapie"
-            description="Verbindung von Körper und Psyche zur ganzheitlichen Wohlbefinden und tieferen Körperbewusstheit."
-            colorClass="therapy-card-turquoise"
-            buttonColor="therapyTurquoise"
-            details="Verbindung von Körper und Psyche zur ganzheitlichen Wohlbefinden und tieferen Körperbewusstheit."
-          />
-          
-          <TherapyCard 
-            icon={<Music size={32} />}
-            title="Ausdruckstherapie"
-            description="Verschiedene kreative Ausdrucksformen nutzen, um Emotionen zu verarbeiten und neue Perspektiven zu gewinnen."
-            colorClass="therapy-card-purple"
-            buttonColor="therapyPurple"
-            details="Verschiedene kreative Ausdrucksformen nutzen, um Emotionen zu verarbeiten und neue Perspektiven zu gewinnen."
-          />
-          
-          <TherapyCard 
-            icon={<Heart size={32} />}
-            title="Traumatherapie"
-            description="Behutsame Bearbeitung traumatischer Erfahrungen durch kreative und körperorientierte Methoden."
-            colorClass="therapy-card-red"
-            buttonColor="therapyRed"
-            details="Behutsame Bearbeitung traumatischer Erfahrungen durch kreative und körperorientierte Methoden."
-          />
-          
-          <TherapyCard 
-            icon={<User size={32} />}
-            title="Einzeltherapie"
-            description="Individuell zugeschnittene Begleitung für persönliche Veränderungswünsche und Entwicklungsziele."
-            colorClass="therapy-card-pink"
-            buttonColor="therapyPink"
-            details="Individuell zugeschnittene Begleitung für persönliche Veränderungswünsche und Entwicklungsziele."
-          />
-          
-          <TherapyCard 
-            icon={<Users size={32} />}
-            title="Gruppentherapie"
-            description="In kleinen Gruppen verschiedene Formen und gemeinsam kreative Lösungswege erarbeiten."
-            colorClass="therapy-card-green"
-            buttonColor="therapyGreen"
-            details="In kleinen Gruppen verschiedene Formen und gemeinsam kreative Lösungswege erarbeiten."
-          />
-        </div>
-        
-        <div className="text-center mt-12">
-          <button className="bg-therapyBlue text-white px-8 py-3 rounded-full shadow-md hover:bg-blue-800 transition duration-300">
-            Alle Angebote ansehen
-          </button>
+          {therapyCards.map((card, index) => (
+            <TherapyCard key={index} {...card} />
+          ))}
         </div>
       </div>
     </section>
