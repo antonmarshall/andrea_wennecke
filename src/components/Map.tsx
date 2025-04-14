@@ -1,86 +1,23 @@
-import React, { useEffect, useRef, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+
+import React from 'react';
 
 const Map = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState<string>('');
-
-  useEffect(() => {
-    const savedToken = localStorage.getItem('mapbox_token');
-    if (savedToken) {
-      setMapboxToken(savedToken);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!mapContainer.current || !mapboxToken) return;
-
-    mapboxgl.accessToken = mapboxToken;
-    
-    try {
-      map.current = new mapboxgl.Map({
-        container: mapContainer.current,
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [10.684750, 53.868522], // Coordinates for Bäckergrube 1, Lübeck
-        zoom: 15
-      });
-
-      new mapboxgl.Marker()
-        .setLngLat([10.684750, 53.868522])
-        .addTo(map.current);
-    } catch (error) {
-      console.error('Error initializing map:', error);
-    }
-
-    return () => {
-      map.current?.remove();
-    };
-  }, [mapboxToken]);
-
-  const handleTokenSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const tokenInput = e.currentTarget.elements.namedItem('token') as HTMLInputElement;
-    const token = tokenInput.value.trim();
-    if (token) {
-      localStorage.setItem('mapbox_token', token);
-      setMapboxToken(token);
-    }
-  };
-
-  if (!mapboxToken) {
-    return (
-      <div className="flex flex-col items-center justify-center p-6 bg-gray-100 rounded-lg h-full">
-        <p className="mb-4 text-sm text-gray-700">
-          Bitte geben Sie Ihren Mapbox-Token ein, um die Karte anzuzeigen.
-        </p>
-        <form onSubmit={handleTokenSubmit} className="w-full max-w-md">
-          <div className="flex flex-col gap-2">
-            <input
-              type="text"
-              name="token"
-              placeholder="Mapbox Public Token eingeben"
-              className="w-full p-2 border border-gray-300 rounded"
-              required
-            />
-            <button 
-              type="submit" 
-              className="px-4 py-2 text-white bg-therapyBlue rounded hover:bg-blue-700 transition-colors"
-            >
-              Karte anzeigen
-            </button>
-          </div>
-          <p className="mt-2 text-xs text-gray-500">
-            Hinweis: Besuchen Sie <a href="https://mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Mapbox.com</a>, um einen Token zu erhalten.
-          </p>
-        </form>
-      </div>
-    );
-  }
-
   return (
-    <div ref={mapContainer} className="w-full h-full" />
+    <div className="h-[400px] w-full rounded-lg overflow-hidden">
+      <iframe
+        title="Praxisstandort"
+        width="100%"
+        height="100%"
+        frameBorder="0"
+        scrolling="no"
+        marginHeight={0}
+        marginWidth={0}
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2363.8046550390897!2d10.682561376739662!3d53.86852197246139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b2090ef8aaaaab%3A0x90f61584acac3e89!2sB%C3%A4ckergrube%201%2C%2023552%20L%C3%BCbeck!5e0!3m2!1sen!2sde!4v1681338000000"
+        style={{ border: 0 }}
+        allowFullScreen
+        loading="lazy"
+      />
+    </div>
   );
 };
 

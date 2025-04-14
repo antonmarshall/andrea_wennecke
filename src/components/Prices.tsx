@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Euro } from 'lucide-react';
+import { User, Users } from 'lucide-react';
 
 const Prices = () => {
   return (
@@ -11,7 +11,7 @@ const Prices = () => {
           <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="flex items-center justify-center mb-6">
               <div className="p-3 bg-therapyBlue/10 rounded-full">
-                <Euro size={32} className="text-therapyBlue" />
+                <User size={32} className="text-therapyBlue" />
               </div>
             </div>
             <h3 className="text-xl font-semibold text-center mb-4">Einzeltherapie</h3>
@@ -22,7 +22,7 @@ const Prices = () => {
           <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
             <div className="flex items-center justify-center mb-6">
               <div className="p-3 bg-therapyBlue/10 rounded-full">
-                <Euro size={32} className="text-therapyBlue" />
+                <Users size={32} className="text-therapyBlue" />
               </div>
             </div>
             <h3 className="text-xl font-semibold text-center mb-4">Gruppentherapie</h3>
