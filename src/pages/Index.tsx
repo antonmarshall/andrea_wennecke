@@ -7,6 +7,7 @@ import TherapyServices from '../components/TherapyServices';
 import ContactSection from '../components/ContactSection';
 import FaqSection from '../components/FaqSection';
 import Footer from '../components/Footer';
+import Directions from '../components/Directions';
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
         <AboutSection />
         <TherapyServices />
         <ContactSection />
+        <Directions />
         <FaqSection />
       </main>
       <Footer />

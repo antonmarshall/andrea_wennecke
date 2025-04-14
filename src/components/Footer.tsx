@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook, Youtube } from 'lucide-react';
 
@@ -74,8 +73,12 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
-          <p>© 2025 Kreativ/Therapie. Alle Rechte vorbehalten.</p>
+        <div className="border-t border-gray-700 mt-8 pt-8 text-sm">
+          <div className="flex justify-center space-x-6">
+            <a href="/impressum" className="hover:text-gray-300 transition duration-300">Impressum</a>
+            <a href="/datenschutz" className="hover:text-gray-300 transition duration-300">Datenschutz</a>
+          </div>
+          <p className="text-center mt-4">© 2025 Kreativ/Therapie. Alle Rechte vorbehalten.</p>
         </div>
       </div>
     </footer>

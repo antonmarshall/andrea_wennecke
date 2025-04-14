@@ -21,18 +21,29 @@ const Header = () => {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
-          <span className="text-therapyBlue font-bold text-xl">Kreativ/Therapie</span>
+          <img src="/lovable-uploads/4603f752-ffdd-4c27-9ba8-d459a58d7fa5.png" alt="Kreativ/Therapie Logo" className="h-12" />
         </div>
         
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-8">
+        <nav className="hidden md:flex space-x-6">
           <button onClick={() => scrollToSection('home')} className="text-gray-600 hover:text-therapyBlue">Home</button>
           <button onClick={() => scrollToSection('about')} className="text-gray-600 hover:text-therapyBlue">Über mich</button>
-          <button onClick={() => scrollToSection('therapy')} className="text-gray-600 hover:text-therapyBlue">Therapieangebote</button>
-          <button onClick={() => scrollToSection('prices')} className="text-gray-600 hover:text-therapyBlue">Preise</button>
-          <button onClick={() => scrollToSection('services')} className="text-gray-600 hover:text-therapyBlue">Leistungen</button>
+          <div className="relative group">
+            <button onClick={() => scrollToSection('therapy')} className="text-gray-600 hover:text-therapyBlue">
+              Therapieangebote
+            </button>
+            <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md p-2 mt-2">
+              <button 
+                onClick={() => scrollToSection('prices')} 
+                className="block w-full text-left px-4 py-2 text-gray-600 hover:text-therapyBlue hover:bg-gray-50"
+              >
+                Preise
+              </button>
+            </div>
+          </div>
           <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-therapyBlue">Kontakt</button>
-          <button onClick={() => scrollToSection('faq')} className="text-gray-600 hover:text-therapyBlue">Fragen/FAQ</button>
+          <button onClick={() => scrollToSection('directions')} className="text-gray-600 hover:text-therapyBlue">Anfahrt</button>
+          <button onClick={() => scrollToSection('faq')} className="text-gray-600 hover:text-therapyBlue">FAQ</button>
         </nav>
         
         {/* Mobile Menu Button */}

@@ -12,11 +12,9 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-[600px] flex items-center">
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("/lovable-uploads/40994d3c-e346-44f7-98b1-ba5445e68690.png")' }}></div>
-      <div className="absolute inset-0 bg-therapyBlue/40"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-2xl text-white">
-          <h1 className="text-5xl font-bold mb-2">Andrea Wennecke</h1>
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="max-w-2xl">
+          <h1 className="text-5xl font-bold mb-2 text-therapyBlue">Andrea Wennecke</h1>
           <h2 className="text-2xl mb-6">Kreativtherapie in Lübeck</h2>
           <p className="text-lg mb-8">
             Kunst- und Gestaltungstherapie, Psychotherapie, 
@@ -26,17 +24,24 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4">
             <button 
               onClick={() => scrollToSection('contact')}
-              className="bg-therapyBlue text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-800 transition duration-300 flex items-center"
+              className="bg-therapyRed text-white px-6 py-3 rounded-full shadow-lg hover:bg-red-700 transition duration-300 flex items-center"
             >
               Termin vereinbaren <ArrowRight className="ml-2" size={18} />
             </button>
             <button 
               onClick={() => scrollToSection('therapy')}
-              className="bg-white text-therapyBlue px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 flex items-center"
+              className="bg-therapyGreen text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 flex items-center"
             >
               Therapieangebote <ArrowRight className="ml-2" size={18} />
             </button>
           </div>
+        </div>
+        <div className="hidden md:block">
+          <img 
+            src="/lovable-uploads/c559deb8-fbd5-40a3-acc5-2fa88fb07999.png" 
+            alt="Sonnenblume" 
+            className="rounded-lg shadow-xl max-w-full h-auto"
+          />
         </div>
       </div>
     </section>

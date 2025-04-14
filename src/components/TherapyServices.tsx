@@ -1,6 +1,6 @@
-
-import React from 'react';
-import { ArrowRight, Palette, Brain, Music, Heart, User, Users } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Palette, Brain, Music, Heart, User, Users } from 'lucide-react';
 
 type TherapyCardProps = {
   icon: React.ReactNode;
@@ -8,20 +8,42 @@ type TherapyCardProps = {
   description: string;
   colorClass: string;
   buttonColor: string;
+  details: string;
 };
 
-const TherapyCard = ({ icon, title, description, colorClass, buttonColor }: TherapyCardProps) => {
+const TherapyCard = ({ icon, title, description, colorClass, buttonColor, details }: TherapyCardProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const hoverColorClass = `hover:bg-${buttonColor}/10`;
+
   return (
-    <div className={`bg-white p-6 rounded-lg shadow-md ${colorClass} h-full flex flex-col`}>
+    <motion.div 
+      className={`bg-white p-6 rounded-lg shadow-md ${colorClass} h-full flex flex-col cursor-pointer ${hoverColorClass}`}
+      onClick={() => setIsExpanded(!isExpanded)}
+      layout
+    >
       <div className="text-gray-600 mb-4">{icon}</div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-gray-600 mb-6 flex-grow">{description}</p>
+      
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="overflow-hidden"
+          >
+            <p className="text-gray-600 mt-4 border-t pt-4">{details}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <button 
-        className={`text-${buttonColor} hover:underline flex items-center text-sm font-medium`}
+        className={`text-${buttonColor} hover:underline flex items-center text-sm font-medium mt-4`}
       >
-        Mehr erfahren <ArrowRight className="ml-1" size={14} />
+        {isExpanded ? 'Weniger anzeigen' : 'Mehr erfahren'}
       </button>
-    </div>
+    </motion.div>
   );
 };
 
@@ -42,6 +64,7 @@ const TherapyServices = () => {
             description="Durch freies Malen, Formen und kreative Materialien Zugang zu Emotionen finden und innere Bilder sichtbar machen."
             colorClass="therapy-card-blue"
             buttonColor="therapyLightBlue"
+            details="Durch freies Malen, Formen und kreative Materialien Zugang zu Emotionen finden und innere Bilder sichtbar machen."
           />
           
           <TherapyCard 
@@ -50,6 +73,7 @@ const TherapyServices = () => {
             description="Verbindung von Körper und Psyche zur ganzheitlichen Wohlbefinden und tieferen Körperbewusstheit."
             colorClass="therapy-card-turquoise"
             buttonColor="therapyTurquoise"
+            details="Verbindung von Körper und Psyche zur ganzheitlichen Wohlbefinden und tieferen Körperbewusstheit."
           />
           
           <TherapyCard 
@@ -58,6 +82,7 @@ const TherapyServices = () => {
             description="Verschiedene kreative Ausdrucksformen nutzen, um Emotionen zu verarbeiten und neue Perspektiven zu gewinnen."
             colorClass="therapy-card-purple"
             buttonColor="therapyPurple"
+            details="Verschiedene kreative Ausdrucksformen nutzen, um Emotionen zu verarbeiten und neue Perspektiven zu gewinnen."
           />
           
           <TherapyCard 
@@ -66,6 +91,7 @@ const TherapyServices = () => {
             description="Behutsame Bearbeitung traumatischer Erfahrungen durch kreative und körperorientierte Methoden."
             colorClass="therapy-card-red"
             buttonColor="therapyRed"
+            details="Behutsame Bearbeitung traumatischer Erfahrungen durch kreative und körperorientierte Methoden."
           />
           
           <TherapyCard 
@@ -74,6 +100,7 @@ const TherapyServices = () => {
             description="Individuell zugeschnittene Begleitung für persönliche Veränderungswünsche und Entwicklungsziele."
             colorClass="therapy-card-pink"
             buttonColor="therapyPink"
+            details="Individuell zugeschnittene Begleitung für persönliche Veränderungswünsche und Entwicklungsziele."
           />
           
           <TherapyCard 
@@ -82,6 +109,7 @@ const TherapyServices = () => {
             description="In kleinen Gruppen verschiedene Formen und gemeinsam kreative Lösungswege erarbeiten."
             colorClass="therapy-card-green"
             buttonColor="therapyGreen"
+            details="In kleinen Gruppen verschiedene Formen und gemeinsam kreative Lösungswege erarbeiten."
           />
         </div>
         
