@@ -9,7 +9,7 @@ const AboutCard = ({
   title: string;
   description: string;
 }) => {
-  return <div className="bg-white p-4 rounded-lg shadow-md flex flex-col sm:flex-row gap-4 items-start transition-all duration-300 hover:shadow-lg hover:bg-gray-50 mx-[30px]">
+  return <div className="bg-white p-4 rounded-lg shadow-md flex flex-col sm:flex-row gap-4 items-start transition-all duration-300 hover:shadow-lg hover:bg-gray-50 mx-[30px] px-[16px] py-0">
       <div className="text-therapyBlue">
         {icon}
       </div>
@@ -25,7 +25,7 @@ const AboutSection = () => {
         <h2 className="text-3xl font-bold text-center mb-8 text-therapyBlue">Über Mich</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="space-y-4 mx-[30px]">
+          <div className="space-y-4 py-0 mx-[30px] px-px">
             <AboutCard icon={<User size={32} />} title="Erfahrene Therapeutin" description="Als langjährig tätige Kreativtherapeutin biete ich einen geschützten Raum für Menschen, die durch kunsttherapeutische und körperorientierte Methoden ihr Wohlbefinden steigern möchten." />
             
             <AboutCard icon={<Shield size={32} />} title="Ganzheitlicher Ansatz" description="Mein therapeutischer Ansatz vereint Kunsttherapie, körperorientierte Psychotherapie und Traumatherapie, um vielfältige Wege des Ausdrucks und der Heilung anzubieten." />
