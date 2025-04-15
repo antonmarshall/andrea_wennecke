@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -12,13 +13,20 @@ const Header = () => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
+          // Adjusted the detection area to make it more reliable
+          return rect.top <= 150 && rect.bottom >= 0;
         }
         return false;
-      }) || 'home';
-      setActiveSection(current);
+      });
+      
+      if (current) {
+        setActiveSection(current);
+      }
     };
+    
     window.addEventListener('scroll', handleScroll);
+    // Call handleScroll once on mount to set the initial active section
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -34,6 +42,7 @@ const Header = () => {
       });
     }
     setIsMenuOpen(false);
+    setActiveSection(id); // Immediately update active section when clicked
   };
 
   const menuItems = [{
@@ -72,7 +81,7 @@ const Header = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`px-4 py-2 rounded-lg transition-all duration-300 text-orange-50 
+              className={`px-4 py-2 rounded-2xl transition-all duration-300 text-orange-50 
                 ${activeSection === item.id 
                   ? 'bg-therapyLightBlue/20 text-white' 
                   : 'hover:bg-therapyLightBlue/10 hover:text-white'
@@ -100,7 +109,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`p-3 text-left rounded-lg transition-colors duration-300 
+                className={`p-3 text-left rounded-2xl transition-colors duration-300 
                   ${activeSection === item.id 
                     ? 'bg-therapyBlue text-white' 
                     : 'text-therapyBlue hover:bg-therapyBlue/10'
