@@ -41,7 +41,7 @@ const AboutSection = () => {
           </div>
           
           <div className="flex items-center justify-center">
-            <img src="/lovable-uploads/3c1ec477-1276-4b9e-a996-06070ffad3e4.png" alt="Portrait" className="rounded-lg shadow-lg max-h-[400px] object-cover" />
+            <img src="/images/portrait.png" alt="Portrait" className="rounded-lg shadow-lg max-h-[400px] object-cover" />
           </div>
         </div>
       </div>
