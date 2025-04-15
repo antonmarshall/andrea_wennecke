@@ -25,7 +25,7 @@ const AboutSection = () => {
         <h2 className="text-3xl font-bold text-center mb-8 text-therapyBlue">Über Mich</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="space-y-4 py-0 mx-[30px] px-px">
+          <div className="space-y-4 py-[4px] mx-[116px] my-[7px] px-0">
             <AboutCard icon={<User size={32} />} title="Erfahrene Therapeutin" description="Als langjährig tätige Kreativtherapeutin biete ich einen geschützten Raum für Menschen, die durch kunsttherapeutische und körperorientierte Methoden ihr Wohlbefinden steigern möchten." />
             
             <AboutCard icon={<Shield size={32} />} title="Ganzheitlicher Ansatz" description="Mein therapeutischer Ansatz vereint Kunsttherapie, körperorientierte Psychotherapie und Traumatherapie, um vielfältige Wege des Ausdrucks und der Heilung anzubieten." />
