@@ -43,7 +43,7 @@ const TherapyServices = () => {
     description: "In kleinen Gruppen verschiedene Formen und gemeinsam kreative Lösungswege erarbeiten."
   }];
   return <section id="therapy" className="py-20 bg-orange-100">
-      <div className="container mx-auto px-8">
+      <div className="container mx-auto px-8 bg-orange-100">
         <h2 className="text-3xl font-bold text-center mb-6 text-therapyBlue">Mein Therapieangebot</h2>
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-14">
           Entdecken Sie meine vielfältigen Therapiemethoden für Erwachsene und Jugendliche.
