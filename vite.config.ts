@@ -10,7 +10,8 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/andrea_wennecke/", // Set base to match your repository name
+  // Set base conditionally depending on the environment
+  base: process.env.NODE_ENV === 'production' && !process.env.LOVABLE ? "/andrea_wennecke/" : "/",
   plugins: [
     react(),
     mode === 'development' &&
