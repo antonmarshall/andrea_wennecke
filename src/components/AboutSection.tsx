@@ -1,14 +1,17 @@
+
 import React from 'react';
 import { User, Heart, Shield } from 'lucide-react';
 
 const AboutCard = ({
   icon,
   title,
-  description
+  description,
+  className
 }: {
   icon: React.ReactNode;
   title: string;
   description: string;
+  className?: string;
 }) => {
   return (
     <div className="p-4 rounded-lg shadow-md flex flex-col sm:flex-row gap-4 items-start transition-all duration-300 hover:shadow-lg mx-[30px] px-[16px] py-0 my-[10px] bg-white/5 border border-orange-100/50 hover:bg-orange-50/70">
