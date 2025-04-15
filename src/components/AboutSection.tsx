@@ -15,13 +15,13 @@ const AboutCard = ({
       </div>
       <div>
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
-        <p className="text-gray-600 text-sm">{description}</p>
+        <p className="text-gray-600 text-sm my-[8px]">{description}</p>
       </div>
     </div>;
 };
 const AboutSection = () => {
-  return <section id="about" className="py-12 bg-orange-100">
-      <div className="container mx-auto px-4 bg-orange-100">
+  return <section id="about" className="py-12 bg-transparent">
+      <div className="container mx-auto px-4 bg-transparent">
         <h2 className="text-3xl font-bold text-center mb-8 text-therapyBlue">Über Mich</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

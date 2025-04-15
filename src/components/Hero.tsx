@@ -10,7 +10,7 @@ const Hero = () => {
     }
   };
   return <section id="home" className="relative min-h-[600px] flex items-center bg-gradient-to-b from-therapyBlue/20 to-transparent bg-orange-50">
-      <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-orange-100">
+      <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-transparent">
         <div className="max-w-2xl mx-[30px]">
           <h1 className="text-5xl font-bold mb-2 text-therapyBlue mx-0">Andrea Wennecke</h1>
           <h2 className="text-2xl mb-6 mx-0">Kreativtherapie in Lübeck</h2>
