@@ -41,7 +41,7 @@ const AboutSection = () => {
           </div>
           
           <div className="flex items-center justify-center">
-            <img src="/public/images/sunflower.png" alt="Portrait" className="rounded-lg shadow-lg max-h-[400px] object-cover" />
+            <img src={`${import.meta.env.BASE_URL}images/sunflower.png`} alt="Portrait" className="rounded-lg shadow-lg max-h-[400px] object-cover" />
           </div>
         </div>
       </div>

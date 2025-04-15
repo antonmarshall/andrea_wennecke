@@ -32,7 +32,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hidden md:block max-w-lg mx-auto">
-          <img alt="Kreativtherapie Artwork" className="rounded-lg shadow-xl max-w-full h-auto object-scale-down" src="/public/images/hero-artwork.png" />
+          <img alt="Kreativtherapie Artwork" className="rounded-lg shadow-xl max-w-full h-auto object-scale-down" src={`${import.meta.env.BASE_URL}images/hero-artwork.png`} />
         </div>
       </div>
     </section>;
