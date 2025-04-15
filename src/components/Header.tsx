@@ -55,7 +55,7 @@ const Header = () => {
   }];
   return <header className="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center bg-sky-800">
-        <div className="flex items-center">
+        <div className="flex items-center bg-transparent">
           <img src="/lovable-uploads/4603f752-ffdd-4c27-9ba8-d459a58d7fa5.png" alt="Kreativ/Therapie Logo" className="h-12" />
         </div>
         
