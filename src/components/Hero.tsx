@@ -12,7 +12,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-[600px] flex items-center bg-gradient-to-b from-therapyBlue/20 to-transparent">
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="max-w-2xl">
           <h1 className="text-5xl font-bold mb-2 text-therapyBlue">Andrea Wennecke</h1>
           <h2 className="text-2xl mb-6">Kreativtherapeutin in Lübeck</h2>
@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
         <div className="hidden md:block max-w-lg mx-auto">
           <img 
-            src="/lovable-uploads/7498d0be-91ac-4df7-845a-9536a3f28204.png" 
+            src="/lovable-uploads/c559deb8-fbd5-40a3-acc5-2fa88fb07999.png" 
             alt="Kreativtherapie Artwork" 
             className="rounded-lg shadow-xl max-w-full h-auto"
           />

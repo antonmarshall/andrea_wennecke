@@ -8,7 +8,7 @@ const AboutCard = ({ icon, title, description }: {
   description: string 
 }) => {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md flex flex-col sm:flex-row gap-4 items-start">
+    <div className="bg-white p-4 rounded-lg shadow-md flex flex-col sm:flex-row gap-4 items-start transition-all duration-300 hover:shadow-lg hover:bg-gray-50">
       <div className="text-therapyBlue">
         {icon}
       </div>

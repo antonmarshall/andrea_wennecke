@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { MapPin, Car, Bus } from 'lucide-react';
 import Map from './Map';
 
 const Directions = () => {
@@ -10,17 +11,21 @@ const Directions = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">So finden Sie zu mir</h3>
-            <p className="mb-4">
-              Meine Praxis befindet sich in der Beckergrube 11, 23552 Lübeck.
-            </p>
-            <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold">Mit dem Auto:</h4>
-                <p>Parkmöglichkeiten finden Sie in den umliegenden Parkhäusern.</p>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-3">
+                <MapPin size={24} className="text-therapyBlue mt-1" />
+                <span>
+                  Beckergrube 11<br />
+                  23552 Lübeck
+                </span>
               </div>
-              <div>
-                <h4 className="font-semibold">Mit öffentlichen Verkehrsmitteln:</h4>
-                <p>Die Bushaltestelle "Beckergrube" befindet sich direkt vor der Praxis.</p>
+              <div className="flex items-start space-x-3">
+                <Car size={24} className="text-therapyBlue mt-1" />
+                <span>Parkmöglichkeiten finden Sie in den umliegenden Parkhäusern.</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Bus size={24} className="text-therapyBlue mt-1" />
+                <span>Die Bushaltestelle "Beckergrube" befindet sich direkt vor der Praxis.</span>
               </div>
             </div>
           </div>
