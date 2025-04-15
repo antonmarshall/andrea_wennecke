@@ -20,10 +20,10 @@ const Hero = () => {
             Erwachsene und Jugendliche in einem geschützten Raum.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button onClick={() => scrollToSection('contact')} className="text-white py-3 rounded-full transition duration-300 flex items-center px-[24px] mx-0 bg-sky-950 hover:bg-sky-800">
+            <button onClick={() => scrollToSection('contact')} className="text-white py-3 rounded-full transition duration-300 flex items-center px-[24px] mx-0 bg-sky-900 hover:bg-sky-800">
               Termin vereinbaren <ArrowRight className="ml-2" size={18} />
             </button>
-            <button onClick={() => scrollToSection('therapy')} className="bg-therapyBlue text-white px-6 py-3 rounded-full hover:bg-therapyBlue/90 transition duration-300 flex items-center mx-0">
+            <button onClick={() => scrollToSection('therapy')} className="text-white px-6 py-3 rounded-full transition duration-300 flex items-center mx-0 bg-sky-900 hover:bg-sky-800">
               Therapieangebote <ArrowRight className="ml-2" size={18} />
             </button>
           </div>

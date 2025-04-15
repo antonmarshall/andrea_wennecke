@@ -20,7 +20,7 @@ const ContactInfo = ({
     </div>;
 };
 const ContactSection = () => {
-  return <section id="contact" className="py-20 bg-transparent">
+  return <section id="contact" className="py-20 bg-orange-50">
       <div className="container mx-auto px-4 bg-transparent">
         <h2 className="text-3xl font-bold text-center mb-14 text-therapyBlue">Kontakt</h2>
         
