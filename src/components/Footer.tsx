@@ -10,7 +10,7 @@ const Footer = () => {
     }
   };
   return <footer className="bg-therapyBlue text-white">
-      <div className="container mx-auto px-[13px] my-0 py-[50px]">
+      <div className="container mx-auto px-[13px] my-0 py-[50px] bg-sky-800">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Kreativ/Therapie</h3>

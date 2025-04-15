@@ -10,7 +10,7 @@ const Hero = () => {
     }
   };
   return <section id="home" className="relative min-h-[600px] flex items-center bg-gradient-to-b from-therapyBlue/20 to-transparent">
-      <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-orange-100">
         <div className="max-w-2xl mx-[30px]">
           <h1 className="text-5xl font-bold mb-2 text-therapyBlue mx-0">Andrea Wennecke</h1>
           <h2 className="text-2xl mb-6 mx-0">Kreativtherapie in Lübeck</h2>
@@ -20,7 +20,7 @@ const Hero = () => {
             Erwachsene und Jugendliche in einem geschützten Raum.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button onClick={() => scrollToSection('contact')} className="bg-therapyBlue text-white py-3 rounded-full hover:bg-therapyBlue/90 transition duration-300 flex items-center px-[24px] mx-0">
+            <button onClick={() => scrollToSection('contact')} className="text-white py-3 rounded-full transition duration-300 flex items-center px-[24px] mx-0 bg-sky-950 hover:bg-sky-800">
               Termin vereinbaren <ArrowRight className="ml-2" size={18} />
             </button>
             <button onClick={() => scrollToSection('therapy')} className="bg-therapyBlue text-white px-6 py-3 rounded-full hover:bg-therapyBlue/90 transition duration-300 flex items-center mx-0">
