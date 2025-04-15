@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hidden md:block max-w-lg mx-auto">
-          <img src="/lovable-uploads/c559deb8-fbd5-40a3-acc5-2fa88fb07999.png" alt="Kreativtherapie Artwork" className="rounded-lg shadow-xl max-w-full h-auto" />
+          <img src="/lovable-uploads/c559deb8-fbd5-40a3-acc5-2fa88fb07999.png" alt="Kreativtherapie Artwork" className="rounded-lg shadow-xl max-w-full h-auto object-scale-down" />
         </div>
       </div>
     </section>;

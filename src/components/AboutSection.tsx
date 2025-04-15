@@ -9,7 +9,7 @@ const AboutCard = ({
   title: string;
   description: string;
 }) => {
-  return <div className="bg-white p-4 rounded-lg shadow-md flex flex-col sm:flex-row gap-4 items-start transition-all duration-300 hover:shadow-lg hover:bg-gray-50 mx-[30px] px-[16px] py-0 my-[10px]">
+  return <div className="p-4 rounded-lg shadow-md flex flex-col sm:flex-row gap-4 items-start transition-all duration-300 hover:shadow-lg mx-[30px] px-[16px] py-0 my-[10px] bg-sky-800">
       <div className="text-therapyBlue">
         {icon}
       </div>
