@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { User, Heart, Shield } from 'lucide-react';
 
@@ -27,8 +26,8 @@ const AboutCard = ({
 };
 
 const AboutSection = () => {
-  // Use import.meta.env.BASE_URL to get the correct base path in both environments
-  const portraitImagePath = `${import.meta.env.BASE_URL}lovable-uploads/3c1ec477-1276-4b9e-a996-06070ffad3e4.png`;
+  const basePath = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL;
+  const portraitImagePath = `${basePath}lovable-uploads/3c1ec477-1276-4b9e-a996-06070ffad3e4.png`;
 
   return <section id="about" className="py-12 bg-orange-50">
       <div className="container mx-auto px-4 bg-[#b8b8b0]/0">

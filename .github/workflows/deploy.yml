@@ -29,6 +29,8 @@ jobs:
 
       - name: Build project
         run: NODE_ENV=production npm run build
+        env:
+          NODE_ENV: production
         
       - name: Make .nojekyll file
         run: touch dist/.nojekyll

@@ -6,7 +6,8 @@ import path from 'path';
 // Dynamic base path based on the environment
 const getBase = () => {
   // In GitHub Pages environment, use the repository name as base
-  return process.env.NODE_ENV === 'production' ? '/andrea-wennecke/' : '/';
+  // In Lovable or development environment, use root path
+  return process.env.NODE_ENV === 'production' && !process.env.LOVABLE ? '/andrea-wennecke/' : '/';
 };
 
 export default defineConfig({
