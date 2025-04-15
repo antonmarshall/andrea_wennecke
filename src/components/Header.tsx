@@ -81,10 +81,10 @@ const Header = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`px-4 py-2 rounded-2xl transition-all duration-300 text-orange-50 
+              className={`px-4 py-2 rounded-2xl transition-all duration-300 text-orange-50 focus:outline-none
                 ${activeSection === item.id 
-                  ? 'bg-therapyLightBlue/20 text-white' 
-                  : 'hover:bg-therapyLightBlue/10 hover:text-white'
+                  ? 'bg-therapyLightBlue/40 text-white font-medium shadow-inner' 
+                  : 'hover:bg-therapyLightBlue/20 hover:text-white'
                 }`}
             >
               {item.text}
@@ -94,7 +94,7 @@ const Header = () => {
         
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-white hover:bg-therapyLightBlue/10 p-2 rounded-lg transition-colors" 
+          className="md:hidden text-white hover:bg-therapyLightBlue/10 p-2 rounded-lg transition-colors focus:outline-none" 
           onClick={toggleMenu}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -109,10 +109,10 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`p-3 text-left rounded-2xl transition-colors duration-300 
+                className={`p-3 text-left rounded-2xl transition-colors duration-300 focus:outline-none
                   ${activeSection === item.id 
-                    ? 'bg-therapyBlue text-white' 
-                    : 'text-therapyBlue hover:bg-therapyBlue/10'
+                    ? 'bg-therapyBlue text-white font-medium shadow-inner' 
+                    : 'text-therapyBlue hover:bg-therapyBlue/20'
                   }`}
               >
                 {item.text}
