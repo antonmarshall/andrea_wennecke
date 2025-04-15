@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+
 const ContactInfo = ({
   icon,
   title,
@@ -19,13 +20,14 @@ const ContactInfo = ({
       </div>
     </div>;
 };
+
 const ContactSection = () => {
   return <section id="contact" className="py-20 bg-orange-50">
       <div className="container mx-auto px-4 bg-transparent">
         <h2 className="text-3xl font-bold text-center mb-14 text-therapyBlue">Kontakt</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="px-[30px]">
+          <div className="px-[30px] mx-[30px]">
             <h3 className="text-xl font-semibold mb-6">Kontaktieren Sie mich</h3>
             <p className="text-gray-600 mb-8">
               Haben Sie Fragen oder möchten Sie einen Termin vereinbaren? Ich freue mich
@@ -89,4 +91,5 @@ const ContactSection = () => {
       </div>
     </section>;
 };
+
 export default ContactSection;
