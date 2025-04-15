@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { User, Heart, Shield } from 'lucide-react';
 
@@ -26,9 +27,6 @@ const AboutCard = ({
 };
 
 const AboutSection = () => {
-  const basePath = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL;
-  const portraitImagePath = `${basePath}lovable-uploads/3c1ec477-1276-4b9e-a996-06070ffad3e4.png`;
-
   return <section id="about" className="py-12 bg-orange-50">
       <div className="container mx-auto px-4 bg-[#b8b8b0]/0">
         <h2 className="text-3xl font-bold text-center mb-8 text-therapyBlue">Über Mich</h2>
@@ -43,7 +41,7 @@ const AboutSection = () => {
           </div>
           
           <div className="flex items-center justify-center">
-            <img src={portraitImagePath} alt="Portrait" className="rounded-lg shadow-lg max-h-[400px] object-cover" />
+            <img src="/lovable-uploads/3c1ec477-1276-4b9e-a996-06070ffad3e4.png" alt="Portrait" className="rounded-lg shadow-lg max-h-[400px] object-cover" />
           </div>
         </div>
       </div>

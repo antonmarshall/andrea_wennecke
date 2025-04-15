@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
@@ -10,10 +11,6 @@ const Hero = () => {
       });
     }
   };
-
-  // Get base path for different environments
-  const basePath = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL;
-  const imagePath = `${basePath}lovable-uploads/89e90114-58fb-4d10-b749-c21c1fd397a1.png`;
 
   return <section id="home" className="relative min-h-[600px] flex items-center bg-gradient-to-b from-orange-50/20 to-transparent bg-[#FDF1E6]">
       <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-transparent">
@@ -35,7 +32,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="hidden md:block max-w-lg mx-auto">
-          <img alt="Kreativtherapie Artwork" className="rounded-lg shadow-xl max-w-full h-auto object-scale-down" src={imagePath} />
+          <img alt="Kreativtherapie Artwork" className="rounded-lg shadow-xl max-w-full h-auto object-scale-down" src="/lovable-uploads/89e90114-58fb-4d10-b749-c21c1fd397a1.png" />
         </div>
       </div>
     </section>;
