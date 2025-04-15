@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -64,7 +65,7 @@ const Header = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`px-4 py-2 rounded-2xl transition-all duration-300 text-orange-50
+              className={`px-4 py-2 rounded-2xl transition-all duration-300 text-orange-50 focus:outline-none
                 ${activeSection === item.id 
                   ? 'bg-therapyLightBlue/40 text-white font-medium' 
                   : 'hover:bg-therapyLightBlue/20'}`}
@@ -91,7 +92,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`p-3 text-left rounded-2xl transition-colors duration-300
+                className={`p-3 text-left rounded-2xl transition-colors duration-300 focus:outline-none
                   ${activeSection === item.id 
                     ? 'bg-therapyBlue text-white font-medium' 
                     : 'text-therapyBlue hover:bg-therapyBlue/10'}`}
