@@ -6,18 +6,17 @@ type TherapyCardProps = {
   icon: React.ReactNode;
   title: string;
   description: string;
-  colorClass: string;
-  buttonColor: string;
+  gradientClass: string;
 };
 
-const TherapyCard = ({ icon, title, description, colorClass }: TherapyCardProps) => {
+const TherapyCard = ({ icon, title, description, gradientClass }: TherapyCardProps) => {
   return (
     <div 
-      className={`bg-white p-6 rounded-lg shadow-md ${colorClass} h-full flex flex-col cursor-pointer transition-colors duration-300`}
+      className={`p-6 rounded-lg shadow-md h-full transition-transform duration-300 ${gradientClass}`}
     >
-      <div className="text-gray-600 mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <div className="text-gray-800 mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
+      <p className="text-gray-800">{description}</p>
     </div>
   );
 };
@@ -28,43 +27,37 @@ const TherapyServices = () => {
       icon: <Palette size={32} />,
       title: "Kunsttherapie",
       description: "Durch freies Malen, Formen und kreative Materialien Zugang zu Emotionen finden.",
-      colorClass: "therapy-card-blue",
-      buttonColor: "therapyLightBlue"
+      gradientClass: "bg-gradient-to-br from-blue-50 to-purple-50 hover:from-blue-100 hover:to-purple-100"
     },
     {
       icon: <Brain size={32} />,
       title: "Körperorientierte Psychotherapie",
       description: "Verbindung von Körper und Psyche zur ganzheitlichen Wohlbefinden.",
-      colorClass: "therapy-card-turquoise",
-      buttonColor: "therapyTurquoise"
+      gradientClass: "bg-gradient-to-br from-green-50 to-blue-50 hover:from-green-100 hover:to-blue-100"
     },
     {
       icon: <Music size={32} />,
       title: "Ausdruckstherapie",
       description: "Verschiedene kreative Ausdrucksformen nutzen, um Emotionen zu verarbeiten und neue Perspektiven zu gewinnen.",
-      colorClass: "therapy-card-purple",
-      buttonColor: "therapyPurple"
+      gradientClass: "bg-gradient-to-br from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100"
     },
     {
       icon: <Heart size={32} />,
       title: "Traumatherapie",
       description: "Behutsame Bearbeitung traumatischer Erfahrungen durch kreative und körperorientierte Methoden.",
-      colorClass: "therapy-card-red",
-      buttonColor: "therapyRed"
+      gradientClass: "bg-gradient-to-br from-red-50 to-orange-50 hover:from-red-100 hover:to-orange-100"
     },
     {
       icon: <User size={32} />,
       title: "Einzeltherapie",
       description: "Individuell zugeschnittene Begleitung für persönliche Veränderungswünsche und Entwicklungsziele.",
-      colorClass: "therapy-card-pink",
-      buttonColor: "therapyPink"
+      gradientClass: "bg-gradient-to-br from-yellow-50 to-green-50 hover:from-yellow-100 hover:to-green-100"
     },
     {
       icon: <Users size={32} />,
       title: "Gruppentherapie",
       description: "In kleinen Gruppen verschiedene Formen und gemeinsam kreative Lösungswege erarbeiten.",
-      colorClass: "therapy-card-green",
-      buttonColor: "therapyGreen"
+      gradientClass: "bg-gradient-to-br from-teal-50 to-blue-50 hover:from-teal-100 hover:to-blue-100"
     }
   ];
 

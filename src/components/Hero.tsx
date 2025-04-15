@@ -24,22 +24,22 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4">
             <button 
               onClick={() => scrollToSection('contact')}
-              className="bg-therapyBlue text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-800 transition duration-300 flex items-center"
+              className="bg-therapyBlue text-white px-6 py-3 rounded-full hover:bg-therapyBlue/90 transition duration-300 flex items-center"
             >
               Termin vereinbaren <ArrowRight className="ml-2" size={18} />
             </button>
             <button 
               onClick={() => scrollToSection('therapy')}
-              className="bg-therapyBlue text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-800 transition duration-300 flex items-center"
+              className="bg-therapyBlue text-white px-6 py-3 rounded-full hover:bg-therapyBlue/90 transition duration-300 flex items-center"
             >
               Therapieangebote <ArrowRight className="ml-2" size={18} />
             </button>
           </div>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden md:block max-w-lg mx-auto">
           <img 
-            src="/lovable-uploads/3c1ec477-1276-4b9e-a996-06070ffad3e4.png" 
-            alt="Portrait" 
+            src="/lovable-uploads/7498d0be-91ac-4df7-845a-9536a3f28204.png" 
+            alt="Kreativtherapie Artwork" 
             className="rounded-lg shadow-xl max-w-full h-auto"
           />
         </div>

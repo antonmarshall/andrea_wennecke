@@ -1,9 +1,29 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'therapy', 'prices', 'contact', 'directions', 'faq'];
+      const current = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      }) || 'home';
+      
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,6 +37,16 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const menuItems = [
+    { id: 'home', text: 'Home' },
+    { id: 'about', text: 'Über mich' },
+    { id: 'therapy', text: 'Therapieangebote' },
+    { id: 'prices', text: 'Preise' },
+    { id: 'contact', text: 'Kontakt' },
+    { id: 'directions', text: 'Anfahrt' },
+    { id: 'faq', text: 'FAQ' }
+  ];
+
   return (
     <header className="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -26,19 +56,15 @@ const Header = () => {
         
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6">
-          {[
-            { id: 'home', text: 'Home' },
-            { id: 'about', text: 'Über mich' },
-            { id: 'therapy', text: 'Therapieangebote' },
-            { id: 'prices', text: 'Preise' },
-            { id: 'contact', text: 'Kontakt' },
-            { id: 'directions', text: 'Anfahrt' },
-            { id: 'faq', text: 'FAQ' }
-          ].map(item => (
+          {menuItems.map(item => (
             <button 
               key={item.id}
               onClick={() => scrollToSection(item.id)} 
-              className="text-gray-600 hover:text-therapyBlue transition-colors duration-300"
+              className={`px-3 py-2 rounded-md transition-colors duration-300 ${
+                activeSection === item.id 
+                  ? 'bg-therapyBlue/10 text-therapyBlue' 
+                  : 'text-gray-600 hover:text-therapyBlue hover:bg-therapyBlue/5'
+              }`}
             >
               {item.text}
             </button>
@@ -54,20 +80,16 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white p-4 shadow-lg absolute w-full">
-          <div className="flex flex-col space-y-4">
-            {[
-              { id: 'home', text: 'Home' },
-              { id: 'about', text: 'Über mich' },
-              { id: 'therapy', text: 'Therapieangebote' },
-              { id: 'prices', text: 'Preise' },
-              { id: 'contact', text: 'Kontakt' },
-              { id: 'directions', text: 'Anfahrt' },
-              { id: 'faq', text: 'FAQ' }
-            ].map(item => (
+          <div className="flex flex-col space-y-1">
+            {menuItems.map(item => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-600 hover:text-therapyBlue text-left py-2 border-b border-gray-100"
+                className={`p-3 text-left rounded-md transition-colors duration-300 ${
+                  activeSection === item.id 
+                    ? 'bg-therapyBlue/10 text-therapyBlue' 
+                    : 'text-gray-600 hover:text-therapyBlue hover:bg-therapyBlue/5'
+                }`}
               >
                 {item.text}
               </button>
