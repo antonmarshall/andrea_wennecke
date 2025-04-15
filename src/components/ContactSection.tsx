@@ -62,22 +62,22 @@ const ContactSection = () => {
             <form className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                <input id="name" type="text" className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-therapyBlue focus:border-therapyBlue" placeholder="Ihr Name" />
+                <input id="name" type="text" placeholder="Ihr Name" className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-therapyBlue focus:border-therapyBlue bg-orange-50" />
               </div>
               
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-Mail</label>
-                <input id="email" type="email" className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-therapyBlue focus:border-therapyBlue" placeholder="Ihre E-Mail" />
+                <input id="email" type="email" placeholder="Ihre E-Mail" className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-therapyBlue focus:border-therapyBlue bg-orange-50" />
               </div>
               
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Betreff</label>
-                <input id="subject" type="text" className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-therapyBlue focus:border-therapyBlue" placeholder="Betreff Ihrer Nachricht" />
+                <input id="subject" type="text" placeholder="Betreff Ihrer Nachricht" className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-therapyBlue focus:border-therapyBlue bg-orange-50" />
               </div>
               
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Nachricht</label>
-                <textarea id="message" rows={5} className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-therapyBlue focus:border-therapyBlue" placeholder="Ihre Nachricht"></textarea>
+                <textarea id="message" rows={5} placeholder="Ihre Nachricht" className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-therapyBlue focus:border-therapyBlue bg-orange-50"></textarea>
               </div>
               
               <button type="submit" className="w-full bg-therapyBlue text-white py-3 px-4 rounded-md hover:bg-blue-800 transition duration-300">

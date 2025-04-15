@@ -10,7 +10,7 @@ const TherapyCard = ({
   title,
   description
 }: TherapyCardProps) => {
-  return <div className="bg-white p-6 rounded-lg shadow-md h-full transition-all duration-300 hover:shadow-lg hover:bg-gray-50">
+  return <div className="p-6 rounded-lg shadow-md h-full transition-all duration-300 hover:shadow-lg bg-orange-50">
       <div className="text-therapyBlue mb-4">{icon}</div>
       <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
       <p className="text-gray-800">{description}</p>
