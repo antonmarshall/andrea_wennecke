@@ -80,7 +80,7 @@ const ContactSection = () => {
                 <textarea id="message" rows={5} placeholder="Ihre Nachricht" className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-therapyBlue focus:border-therapyBlue bg-orange-50"></textarea>
               </div>
               
-              <button type="submit" className="w-full bg-therapyBlue text-white py-3 px-4 rounded-md hover:bg-blue-800 transition duration-300">
+              <button type="submit" className="w-full text-white py-3 px-4 rounded-md transition duration-300 bg-sky-900 hover:bg-sky-800">
                 Nachricht senden
               </button>
             </form>
