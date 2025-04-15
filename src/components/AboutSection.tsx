@@ -1,5 +1,6 @@
 import React from 'react';
 import { User, Heart, Shield } from 'lucide-react';
+
 const AboutCard = ({
   icon,
   title,
@@ -9,7 +10,8 @@ const AboutCard = ({
   title: string;
   description: string;
 }) => {
-  return <div className="p-4 rounded-lg shadow-md flex flex-col sm:flex-row gap-4 items-start transition-all duration-300 hover:shadow-lg mx-[30px] px-[16px] py-0 my-[10px] bg-orange-50">
+  return (
+    <div className="p-4 rounded-lg shadow-md flex flex-col sm:flex-row gap-4 items-start transition-all duration-300 hover:shadow-lg mx-[30px] px-[16px] py-0 my-[10px] bg-white/5 border border-orange-100/50 hover:bg-orange-50/70">
       <div className="text-therapyBlue">
         {icon}
       </div>
@@ -17,8 +19,10 @@ const AboutCard = ({
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
         <p className="text-gray-600 text-sm my-[8px]">{description}</p>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 const AboutSection = () => {
   return <section id="about" className="py-12 bg-orange-50">
       <div className="container mx-auto px-4 bg-transparent">
@@ -40,4 +44,5 @@ const AboutSection = () => {
       </div>
     </section>;
 };
+
 export default AboutSection;
