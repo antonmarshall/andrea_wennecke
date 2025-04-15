@@ -1,17 +1,16 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook, Youtube } from 'lucide-react';
-
 const Footer = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <footer className="bg-therapyBlue text-white">
-      <div className="container mx-auto px-4 py-12">
+  return <footer className="bg-therapyBlue text-white">
+      <div className="container mx-auto px-[13px] my-0 py-[50px]">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Kreativ/Therapie</h3>
@@ -81,8 +80,6 @@ const Footer = () => {
           <p className="text-center mt-4">© 2025 Kreativ/Therapie. Alle Rechte vorbehalten.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

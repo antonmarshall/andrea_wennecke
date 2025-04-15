@@ -1,15 +1,12 @@
-
 import React from 'react';
 import { MapPin, Car, Bus } from 'lucide-react';
 import Map from './Map';
-
 const Directions = () => {
-  return (
-    <section id="directions" className="py-20 bg-gray-50">
+  return <section id="directions" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-6 text-therapyBlue">Anfahrt</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
+          <div className="px-[30px]">
             <h3 className="text-xl font-semibold mb-4">So finden Sie zu mir</h3>
             <div className="space-y-6">
               <div className="flex items-start space-x-3">
@@ -34,8 +31,6 @@ const Directions = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Directions;
