@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -13,9 +12,14 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: {
+				DEFAULT: '4rem',
+				sm: '2rem',
+				lg: '6rem',
+				xl: '8rem'
+			},
 			screens: {
-				'2xl': '1400px'
+				'2xl': '1600px'
 			}
 		},
 		extend: {
