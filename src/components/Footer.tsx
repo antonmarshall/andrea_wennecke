@@ -1,5 +1,8 @@
+
 import React from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook, Youtube } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -43,10 +46,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Informationen</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-gray-300 transition duration-300">Kontakt</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition duration-300">Anreise</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition duration-300">Datenschutz</a></li>
-              <li><a href="#" className="hover:text-gray-300 transition duration-300">Impressum</a></li>
+              <li><button onClick={() => scrollToSection('contact')} className="hover:text-gray-300 transition duration-300">Kontakt</button></li>
+              <li><button onClick={() => scrollToSection('directions')} className="hover:text-gray-300 transition duration-300">Anreise</button></li>
+              <li><Link to="/datenschutz" className="hover:text-gray-300 transition duration-300">Datenschutz</Link></li>
+              <li><Link to="/impressum" className="hover:text-gray-300 transition duration-300">Impressum</Link></li>
             </ul>
           </div>
           
@@ -74,8 +77,8 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-sm">
           <div className="flex justify-center space-x-6">
-            <a href="/impressum" className="hover:text-gray-300 transition duration-300">Impressum</a>
-            <a href="/datenschutz" className="hover:text-gray-300 transition duration-300">Datenschutz</a>
+            <Link to="/impressum" className="hover:text-gray-300 transition duration-300">Impressum</Link>
+            <Link to="/datenschutz" className="hover:text-gray-300 transition duration-300">Datenschutz</Link>
           </div>
           <p className="text-center mt-4">© 2025 Kreativ/Therapie. Alle Rechte vorbehalten.</p>
         </div>
