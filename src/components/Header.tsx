@@ -55,7 +55,7 @@ const Header = () => {
       // Wenn wir bereits auf der Hauptseite sind, einfach scrollen
       const element = document.getElementById(id);
       if (element) {
-        const headerOffset = 100; // Offset to account for fixed header
+        const headerOffset = 50; // Offset to account for fixed header
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         
