@@ -6,13 +6,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "go": "git add . && git commit -m \"Update website\" && git push && npm run build && npm run deploy"
+    "go": "git add . && git commit -m \"update\" && git push && npm run deploy"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",

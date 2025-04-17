@@ -12,9 +12,14 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: "2rem",
+			padding: {
+				DEFAULT: '4rem',
+				sm: '2rem',
+				lg: '6rem',
+				xl: '8rem'
+			},
 			screens: {
-				"2xl": "1400px",
+				'2xl': '1600px'
 			}
 		},
 		extend: {
@@ -59,13 +64,6 @@ export default {
 				therapyPurple: '#7b5f9e',
 				therapyPink: '#e05f8b',
 				therapyTurquoise: '#39b0ad',
-				therapySand: '#fff7ed',
-				'therapy-blue': '#0c4a6e',
-				'therapy-gold': '#b45309',
-				'therapy-sand': '#fff6ea',
-				'therapy-bg': '#fef3e2',
-				'therapy-block': '#fff6ea',
-				'therapy-inner': '#fffaf5',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
