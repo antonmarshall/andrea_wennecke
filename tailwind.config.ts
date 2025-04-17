@@ -12,18 +12,20 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: {
-				DEFAULT: '4rem',
-				sm: '2rem',
-				lg: '6rem',
-				xl: '8rem'
-			},
+			padding: "2rem",
 			screens: {
-				'2xl': '1600px'
+				"2xl": "1400px",
 			}
 		},
 		extend: {
 			colors: {
+				'therapy': {
+					sand: '#f5ce8f',
+					gold: '#d39937',
+					coral: '#dc8782',
+					blue: '#5b969c',
+					lightBlue: '#ddfbfe',
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
