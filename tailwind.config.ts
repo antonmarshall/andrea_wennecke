@@ -59,6 +59,7 @@ export default {
 				therapyPurple: '#7b5f9e',
 				therapyPink: '#e05f8b',
 				therapyTurquoise: '#39b0ad',
+				therapySand: '#fff7ed',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

@@ -12,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-[600px] flex items-center bg-therapy-sand/20 border border-gray-200 rounded-lg my-4">
+    <section id="home" className="relative min-h-[600px] flex items-center bg-therapy-sand border border-gray-200 rounded-lg my-4">
       <div className="container mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="max-w-2xl">
           <h1 className="text-5xl font-bold mb-3 text-therapy-blue">Andrea Wennecke</h1>
