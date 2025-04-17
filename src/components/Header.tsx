@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowLeft } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isLegalPage = location.pathname === '/impressum' || location.pathname === '/datenschutz';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,9 +56,19 @@ const Header = () => {
 
   return (
     <header className="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center rounded-xl bg-sky-800">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center rounded-b-xl bg-sky-800">
         <div className="flex items-center bg-transparent">
-          <h1 className="text-white text-xl font-medium">Andrea Wennecke</h1>
+          {isLegalPage ? (
+            <button
+              onClick={() => navigate('/')}
+              className="text-white hover:text-gray-200 transition-colors flex items-center"
+            >
+              <ArrowLeft size={20} className="mr-2" />
+              <span>Zurück</span>
+            </button>
+          ) : (
+            <h1 className="text-white text-xl font-medium">Andrea Wennecke</h1>
+          )}
         </div>
         
         {/* Desktop Menu */}

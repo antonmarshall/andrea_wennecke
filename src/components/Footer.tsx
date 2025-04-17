@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram, Facebook, Youtube } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -16,21 +15,13 @@ const Footer = () => {
       <div className="container mx-auto px-[13px] my-0 py-[50px] bg-sky-900">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">Kreativ/Therapie</h3>
+            <h3 className="text-xl font-semibold mb-4">Andrea Wennecke</h3>
+            <p className="text-sm mb-4">
+              Kreativtherapie in Lübeck
+            </p>
             <p className="text-sm mb-4">
               Professionelle Hilfe durch Therapieangebote für Kinder, Jugendliche und Erwachsene.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="hover:text-gray-300 transition duration-300">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="hover:text-gray-300 transition duration-300">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="hover:text-gray-300 transition duration-300">
-                <Youtube size={20} />
-              </a>
-            </div>
           </div>
           
           <div>
@@ -80,9 +71,10 @@ const Footer = () => {
             <Link to="/impressum" className="hover:text-gray-300 transition duration-300">Impressum</Link>
             <Link to="/datenschutz" className="hover:text-gray-300 transition duration-300">Datenschutz</Link>
           </div>
-          <p className="text-center mt-4">© 2025 Kreativ/Therapie. Alle Rechte vorbehalten.</p>
+          <p className="text-center mt-4">© 2025 Andrea Wennecke. Alle Rechte vorbehalten.</p>
         </div>
       </div>
     </footer>;
 };
+
 export default Footer;
