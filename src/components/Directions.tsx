@@ -3,8 +3,8 @@ import { MapPin } from 'lucide-react';
 
 const Directions = () => {
   return (
-    <section id="directions" className="py-20 bg-therapy-sand/30 border border-gray-200 rounded-lg my-4">
-      <div className="container mx-auto px-4">
+    <section id="directions" className="py-20 bg-therapy-sand border border-gray-200 rounded-lg my-4">
+      <div className="container mx-auto px-8">
         <h2 className="text-3xl font-bold text-center mb-12 text-therapy-blue">Anfahrt</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
