@@ -12,7 +12,7 @@ const AboutCard = ({ icon, title, description, className }: AboutCardProps) => {
   return (
     <div className={`p-6 rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl ${className}`}>
       <div className="flex items-start space-x-4">
-        <div className="p-3 bg-therapy-lightBlue rounded-lg text-therapy-blue">
+        <div className="p-3 bg-therapy-blue/20 rounded-lg text-therapy-blue">
           {icon}
         </div>
         <div>
@@ -26,7 +26,7 @@ const AboutCard = ({ icon, title, description, className }: AboutCardProps) => {
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-therapy-sand/10">
+    <section id="about" className="py-20 bg-therapy-sand/10 border border-gray-200 rounded-lg my-4">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-therapy-blue">Über Mich</h2>
         
@@ -52,8 +52,6 @@ const AboutSection = () => {
           </div>
           
           <div className="relative flex items-center justify-center">
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-therapy-coral rounded-full opacity-20 z-0"></div>
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-therapy-blue rounded-full opacity-20 z-0"></div>
             <div className="relative z-10 w-full max-w-lg">
               <div className="rounded-2xl overflow-hidden shadow-xl border-4 border-white transform hover:scale-[1.02] transition-transform duration-300">
                 <img 

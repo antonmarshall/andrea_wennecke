@@ -71,7 +71,7 @@ const Header = () => {
 
   return (
     <header className="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center rounded-b-xl bg-sky-800">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center rounded-b-xl bg-therapy-blue">
         <div className="flex items-center bg-transparent">
           {isLegalPage ? (
             <button
@@ -82,7 +82,10 @@ const Header = () => {
               <span>Zurück</span>
             </button>
           ) : (
-            <h1 className="text-white text-xl font-medium">Andrea Wennecke</h1>
+            <div className="flex flex-col">
+              <h1 className="text-white text-xl font-medium">Andrea Wennecke</h1>
+              <p className="text-therapy-gold text-sm font-light">Kreativtherapie in Lübeck</p>
+            </div>
           )}
         </div>
         
@@ -92,10 +95,10 @@ const Header = () => {
             <button
               key={item.id}
               onClick={() => handleNavigation(item.id)}
-              className={`px-4 py-2 rounded-2xl transition-all duration-300 text-orange-50 focus:outline-none
+              className={`px-4 py-2 rounded-2xl transition-all duration-300 text-white focus:outline-none
                 ${activeSection === item.id 
-                  ? 'bg-therapyLightBlue/40 text-white font-medium' 
-                  : 'hover:bg-therapyLightBlue/20'}`}
+                  ? 'bg-therapy-gold/40 text-white font-medium' 
+                  : 'hover:bg-therapy-gold/20'}`}
             >
               {item.text}
             </button>
@@ -104,7 +107,7 @@ const Header = () => {
         
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-white p-2 rounded-lg transition-colors focus:outline-none hover:bg-therapyLightBlue/20" 
+          className="md:hidden text-white p-2 rounded-lg transition-colors focus:outline-none hover:bg-therapy-gold/20" 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -130,8 +133,8 @@ const Header = () => {
                 onClick={() => handleNavigation(item.id)}
                 className={`p-3 text-left rounded-2xl transition-all duration-300 focus:outline-none
                   ${activeSection === item.id 
-                    ? 'bg-therapyBlue text-white font-medium' 
-                    : 'text-therapyBlue hover:bg-therapyBlue/10'}`}
+                    ? 'bg-therapy-blue text-white font-medium' 
+                    : 'text-therapy-blue hover:bg-therapy-blue/10'}`}
               >
                 {item.text}
               </button>

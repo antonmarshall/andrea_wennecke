@@ -19,13 +19,6 @@ export default {
 		},
 		extend: {
 			colors: {
-				'therapy': {
-					sand: '#f5ce8f',
-					gold: '#d39937',
-					coral: '#dc8782',
-					blue: '#5b969c',
-					lightBlue: '#ddfbfe',
-				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

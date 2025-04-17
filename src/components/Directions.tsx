@@ -3,7 +3,7 @@ import { MapPin } from 'lucide-react';
 
 const Directions = () => {
   return (
-    <section id="directions" className="py-20 bg-therapy-lightBlue/30">
+    <section id="directions" className="py-20 bg-therapy-sand/30 border border-gray-200 rounded-lg my-4">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-therapy-blue">Anfahrt</h2>
         
@@ -60,8 +60,6 @@ const Directions = () => {
                 className="rounded-lg"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-therapy-sand rounded-full opacity-20 z-0"></div>
-            <div className="absolute -top-6 -left-6 w-24 h-24 bg-therapy-coral rounded-full opacity-20 z-0"></div>
           </div>
         </div>
       </div>
