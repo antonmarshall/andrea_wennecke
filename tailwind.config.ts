@@ -64,6 +64,8 @@ export default {
 				'therapy-gold': '#b45309',
 				'therapy-sand': '#fff6ea',
 				'therapy-bg': '#fef3e2',
+				'therapy-block': '#fff6ea',
+				'therapy-inner': '#fffaf5',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

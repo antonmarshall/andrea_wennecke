@@ -83,7 +83,10 @@ const Header = () => {
                 <li key={item.id}>
                   <button
                     onClick={() => handleNavigation(item.id)}
-                    className="text-therapy-blue hover:text-therapy-gold transition-colors duration-300"
+                    className={`px-4 py-2 rounded-lg transition-all duration-300
+                      ${activeSection === item.id 
+                        ? 'bg-therapy-blue text-white' 
+                        : 'text-therapy-blue hover:bg-therapy-blue/10'}`}
                   >
                     {item.text}
                   </button>
