@@ -33,12 +33,27 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
+  const handleNavigation = (id: string) => {
+    // Wenn wir auf einer Legal-Seite sind, navigiere zuerst zur Hauptseite
+    if (isLegalPage) {
+      navigate('/');
+      // Warte kurz, bis die Navigation abgeschlossen ist, bevor wir scrollen
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    } else {
+      // Wenn wir bereits auf der Hauptseite sind, einfach scrollen
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
     }
     setIsMenuOpen(false);
     setActiveSection(id);
@@ -76,7 +91,7 @@ const Header = () => {
           {menuItems.map(item => (
             <button
               key={item.id}
-              onClick={() => scrollToSection(item.id)}
+              onClick={() => handleNavigation(item.id)}
               className={`px-4 py-2 rounded-2xl transition-all duration-300 text-orange-50 focus:outline-none
                 ${activeSection === item.id 
                   ? 'bg-therapyLightBlue/40 text-white font-medium' 
@@ -112,7 +127,7 @@ const Header = () => {
             {menuItems.map(item => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleNavigation(item.id)}
                 className={`p-3 text-left rounded-2xl transition-all duration-300 focus:outline-none
                   ${activeSection === item.id 
                     ? 'bg-therapyBlue text-white font-medium' 
