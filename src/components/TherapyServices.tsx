@@ -83,10 +83,13 @@ const TherapyServices = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {therapyCards.map((card, index) => (
-            <TherapyCard key={index} {...card} />
-          ))}
+        <div className="p-6 rounded-lg shadow-md bg-white/80 backdrop-blur-sm border border-orange-200/50">
+          <h3 className="text-xl font-semibold mb-6 text-therapyBlue">Therapiemethoden</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {therapyCards.map((card, index) => (
+              <TherapyCard key={index} {...card} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
