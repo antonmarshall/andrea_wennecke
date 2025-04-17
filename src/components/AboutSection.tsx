@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { User, Heart, Shield } from 'lucide-react';
 
@@ -14,7 +13,7 @@ const AboutCard = ({
   className?: string;
 }) => {
   return (
-    <div className={`p-4 rounded-lg shadow-md flex flex-col sm:flex-row gap-4 items-start transition-all duration-300 hover:shadow-lg mx-[30px] px-[16px] py-0 my-[10px] bg-orange-100/50 hover:bg-orange-200/50 border border-orange-200/50 ${className}`}>
+    <div className={`p-4 rounded-lg shadow-md flex flex-col sm:flex-row gap-4 items-start transition-all duration-300 hover:shadow-lg mx-[30px] px-[16px] py-0 my-[10px] bg-white/80 backdrop-blur-sm hover:bg-orange-100/80 border border-orange-200/50 ${className}`}>
       <div className="text-therapyBlue">
         {icon}
       </div>
@@ -40,8 +39,8 @@ const AboutSection = () => {
             <AboutCard icon={<Heart size={32} />} title="Persönliche Begleitung" description="Ich begleite Sie einfühlsam und individuell auf Ihrem persönlichen Weg zu mehr innerer Balance und Klarheit - unabhängig von Alter und Lebenssituation." className="my-[5px]" />
           </div>
           
-          <div className="flex items-center justify-center">
-            <img src={`${import.meta.env.BASE_URL}images/sunflower.png`} alt="Portrait" className="rounded-lg shadow-lg max-h-[400px] object-cover" />
+          <div className="flex items-center justify-center p-4 rounded-lg shadow-xl bg-white/80 backdrop-blur-sm border border-orange-200/50">
+            <img src={`${import.meta.env.BASE_URL}images/sunflower.png`} alt="Portrait" className="rounded-lg shadow-md max-h-[400px] object-cover border border-orange-200/50" />
           </div>
         </div>
       </div>

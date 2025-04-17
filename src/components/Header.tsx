@@ -16,8 +16,8 @@ const Header = () => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          // More precise detection with a smaller threshold
-          return rect.top <= 100 && rect.bottom >= 0;
+          // Adjusted threshold to account for header height and some padding
+          return rect.top <= 150 && rect.bottom >= 0;
         }
         return false;
       });
@@ -41,7 +41,12 @@ const Header = () => {
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
-          element.scrollIntoView({
+          const headerOffset = 100; // Offset to account for fixed header
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
             behavior: 'smooth'
           });
         }
@@ -50,13 +55,17 @@ const Header = () => {
       // Wenn wir bereits auf der Hauptseite sind, einfach scrollen
       const element = document.getElementById(id);
       if (element) {
-        element.scrollIntoView({
+        const headerOffset = 100; // Offset to account for fixed header
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
           behavior: 'smooth'
         });
       }
     }
     setIsMenuOpen(false);
-    setActiveSection(id);
   };
 
   const menuItems = [
